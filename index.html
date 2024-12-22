@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORANGE 輸入金鑰</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #101011;
+            color: #f97326;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 2px solid #f97326;
+            background: #101011;
+            color: #f97326;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #f97326;
+            background-color: transparent;
+            border: 2px solid #f97326;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #f97326;
+            color: #101011;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container">
+        <h2>進入 ORANGE 的思緒</h2>
+        <input type="password" id="password" placeholder="輸入您的鑰匙密碼">
+        <button onclick="checkPassword()">ENTER</button>
+        <p id="error-message" style="color: red; display: none;">金鑰錯誤，請再次輸入。</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            if (passwordInput.length === 10) {
+                // 密码正确，跳转至打字效果页面
+                window.location.href = 'typing.html';
+            } else {
+                // 密码不符合要求，显示错误信息
+                errorMessage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

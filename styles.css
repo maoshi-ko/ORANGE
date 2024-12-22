@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #101011; /* 背景颜色 */
+    color: #f97326; /* 文字颜色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中对齐 */
+    justify-content: flex-start; /* 从页面顶部开始排列 */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.text-container {
+    font-size: 24px;
+    padding: 10px 15px; /* 左右内边距减少，保持均等 */
+    width: 95%; /* 让文本容器占据页面的 95% 宽度 */
+    max-width: 1200px; /* 最大宽度调整为 1200px */
+    min-width: 300px; /* 确保在窄屏设备上有适当的宽度 */
+    text-align: left; /* 文本从左对齐 */
+    white-space: pre-wrap; /* 保持空白字符格式 */
+    overflow-wrap: break-word; /* 允许长单词在必要时换行 */
+    border: none; /* 移除边框 */
+    margin: 0 auto; /* 自动水平居中，确保两侧留白均等 */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
